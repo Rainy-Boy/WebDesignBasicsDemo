@@ -44,6 +44,56 @@
                 order: -1;
             }
         }
+
+        /* Dark mode styles */
+        [data-theme="dark"] {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        [data-theme="dark"] .navbar {
+            background-color: #2d2d2d !important;
+        }
+
+        [data-theme="dark"] .bg-light {
+            background-color: #2d2d2d !important;
+        }
+
+        [data-theme="dark"] .header-section {
+            background: linear-gradient(135deg, #4a5568 0%, #553c9a 100%);
+        }
+
+        [data-theme="dark"] .wireframe-box {
+            background-color: #3a3a3a;
+            border-color: #555;
+            color: #cccccc;
+        }
+
+        [data-theme="dark"] .text-muted {
+            color: #aaaaaa !important;
+        }
+
+        [data-theme="dark"] .btn-outline-primary {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        [data-theme="dark"] .btn-outline-primary:hover {
+            background-color: #667eea;
+            color: white;
+        }
+
+        [data-theme="dark"] .rating-stars {
+            color: #ffd700;
+        }
+
+        [data-theme="dark"] footer {
+            background-color: #2d2d2d !important;
+        }
+
+        #darkModeToggle {
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +101,9 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <span class="navbar-brand mb-0 h1">Logo</span>
+            <button id="darkModeToggle" class="btn btn-outline-secondary btn-sm">
+                <span id="darkModeIcon">🌙</span>
+            </button>
         </div>
     </nav>
 
@@ -193,5 +246,32 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark mode toggle functionality (using in-memory storage only)
+        let currentTheme = 'light'; // Default theme
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const body = document.body;
+
+        // Set initial theme
+        body.setAttribute('data-theme', currentTheme);
+        darkModeIcon.textContent = '🌙';
+
+        darkModeToggle.addEventListener('click', function() {
+            // Toggle theme
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            // Apply theme
+            body.setAttribute('data-theme', currentTheme);
+
+            // Update icon
+            if (currentTheme === 'dark') {
+                darkModeIcon.textContent = '☀️';
+            } else {
+                darkModeIcon.textContent = '🌙';
+            }
+        });
+    </script>
 </body>
 </html>
