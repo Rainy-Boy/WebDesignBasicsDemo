@@ -7,35 +7,38 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .wireframe-box {
-            border: 2px solid #ddd;
-            background-color: #f8f9fa;
+            border: 2px solid #B8B8FF;
+            background-color: #F8F7FF;
             min-height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
         }
+        .intro-box {
+            color: #2D2D44;
+        }
         .course-card {
-            border: 1px solid #ddd;
+            border: 1px solid #B8B8FF;
             min-height: 150px;
             margin-bottom: 20px;
             transition: all 0.3s ease;
         }
         .rating-stars {
-            color: #ffc107;
+            color: #FFD8BE;
         }
         .header-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #9381FF 0%, #B8B8FF 100%);
             color: white;
             padding: 60px 0;
         }
         .btn-outline-primary {
-            border-color: #667eea;
-            color: #667eea;
+            border-color: #9381FF;
+            color: #9381FF;
         }
         .btn-outline-primary:hover {
-            background-color: #667eea;
-            border-color: #667eea;
+            background-color: #9381FF;
+            border-color: #9381FF;
         }
         
         /* Mobile-first approach: image always comes first on mobile */
@@ -47,48 +50,45 @@
 
         /* Dark mode styles */
         [data-theme="dark"] {
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: #1E1E2E;
+            color: #E0E0F0;
         }
 
         [data-theme="dark"] .navbar {
-            background-color: #2d2d2d !important;
+            background-color: #2D2D44 !important;
         }
 
-        [data-theme="dark"] .bg-light {
-            background-color: #2d2d2d !important;
+        [data-theme="dark"] .bg-light,
+        [data-theme="dark"] footer {
+            background-color: #2D2D44 !important;
         }
 
         [data-theme="dark"] .header-section {
-            background: linear-gradient(135deg, #4a5568 0%, #553c9a 100%);
+            background: linear-gradient(135deg, #9381FF 0%, #B8B8FF 100%);
         }
 
         [data-theme="dark"] .wireframe-box {
-            background-color: #3a3a3a;
-            border-color: #555;
-            color: #cccccc;
+            background-color: #2D2D44;
+            border-color: #9381FF;
+            color: #E0E0F0;
         }
 
         [data-theme="dark"] .text-muted {
-            color: #aaaaaa !important;
+            color: #AAAAAA !important;
         }
 
         [data-theme="dark"] .btn-outline-primary {
-            border-color: #667eea;
-            color: #667eea;
+            border-color: #FFD8BE;
+            color: #FFD8BE;
         }
 
         [data-theme="dark"] .btn-outline-primary:hover {
-            background-color: #667eea;
-            color: white;
+            background-color: #FFD8BE;
+            color: #1E1E2E;
         }
 
         [data-theme="dark"] .rating-stars {
-            color: #ffd700;
-        }
-
-        [data-theme="dark"] footer {
-            background-color: #2d2d2d !important;
+            color: #FFD8BE;
         }
 
         #darkModeToggle {
@@ -112,10 +112,10 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="wireframe-box text-dark mb-4">
+                    <div class="wireframe-box mb-4 intro-box">
                         <div>
                             <h1 class="display-6 fw-bold">Manas ikdienā lietotās lietotnes, mācoties Latvijas Universitātē</h1>
-                            <p class="lead mt-3">Remis Ričards Ramis<br>r22043</p>
+                            <p class="lead mt-3">Reinis Ričards Ramis<br>rr22043</p>
                         </div>
                     </div>
                 </div>
